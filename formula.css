@@ -1,0 +1,785 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+
+.navbar {
+    /* background: #d44d28; */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.navbar-scrolled {
+    background-color: #d44d28;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    /*primeiro valor de margin é top, o segundo é right, o terceiro é bottom e o quarto é left
+    se você inserir só 2 valores, os 2 primeiros vão se referir à top e bottom e os 2 ultimos à left e right*/
+    margin: 0 auto;
+    /* isso também se aplica a padding */
+    padding: 0 15px;
+}
+
+/*vai ser add depois */
+/*(fa-gem)*/
+#logo-icon {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    height: 150px;
+    width: 250px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    top: -30px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_item {
+    height: 60px;
+}
+
+.navbar_links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    position: relative;
+}
+
+.navbar_links_prod {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    width: 140px;
+    position: relative;
+}
+
+.navbar_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: black;
+    color: #fff;
+}
+
+/*isso daqui faz ficar com cor diferente quando voce poe o cursor em cima do botão*/
+/*muda a cor depois*/
+.button:hover {
+    background: #FCC062;
+    transition: all 0.3s ease;
+}
+
+/* .navbar_links:hover {
+    color: #fcc062;
+    transition: all 0.3s ease;
+} */
+
+.navbar_links::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 2px;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar_links_prod::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 2px;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar_links:hover::after {
+    transform: scaleX(1);
+}
+
+    .navbar_links_prod:hover::after {
+transform: scaleX(1);
+}
+
+
+/* MAIN */
+
+.main {
+    height: 600px;
+}
+
+
+.ParallaxVideo{
+    height: 500px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.ParallaxVideo video{
+    max-width: 100%;
+    position: fixed;
+    top:0;
+    z-index: -999;
+}
+/* .ParallaxVideo h1 {
+    margin-top: 1rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 20;
+} */
+
+.main_content {
+    z-index: 10;
+}
+
+.ParallaxVideo h1 {
+    margin-top: 150px;
+    padding-left: 40px;
+    width: 800px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 20;
+}
+
+/* sem botão */
+
+/* PROCESSO */
+
+.processo {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/heptarepetido.jpeg");
+    display: grid;
+    z-index: -1;
+}
+
+.ptitulo {
+    color: #fff;
+    font-size: 70px;
+    justify-items: center;
+    text-align: center;
+    margin-top: 150px;
+}
+
+hr {
+    background-color: white;
+    height: 5px;
+}
+
+/* DISCO 1 */
+
+.brainstorm {
+    height: 600px;
+}
+
+.roteiro {
+    height: 600px;
+}
+
+.casting {
+    height: 600px;
+}
+
+.producaocurta {
+    height: 600px;
+}
+
+.edicao {
+    height: 600px;
+}
+
+.marketing {
+    height: 600px;
+}
+
+.lancamento {
+    height: 600px;
+}
+
+.disco1 {
+    animation: rotation 8s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.disco1 {
+    margin-left: 0;
+    width: 800px;
+    left: -60px;
+    margin-top: 100px;
+    position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+    display: flex;
+    float: left;
+}
+
+.textob {
+    margin-top: 200px;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    right: 100px;
+}
+
+.teste {
+    background: rgba(0, 0, 0, 0.8);
+    height: 300px;
+    position: absolute;
+    width: 600px;
+    margin-left: 670px;
+    margin-top: 180px;
+    border-radius: 12px;
+}
+
+.teste1 {
+    background: rgba(0, 0, 0, 0.8);
+    height: 330px;
+    position: absolute;
+    width: 600px;
+    margin-left: 670px;
+    margin-top: 160px;
+    border-radius: 12px;
+}
+
+.teste2 {
+    background: rgba(0, 0, 0, 0.8);
+    height: 330px;
+    position: absolute;
+    width: 600px;
+    margin-left: 670px;
+    margin-top: 160px;
+    border-radius: 12px;
+}
+.teste3 {
+    background: rgba(0, 0, 0, 0.8);
+    height: 330px;
+    position: absolute;
+    width: 600px;
+    margin-left: 670px;
+    margin-top: 160px;
+    border-radius: 12px;
+}
+.teste4 {
+    background: rgba(0, 0, 0, 0.8);
+    height: 360px;
+    position: absolute;
+    width: 600px;
+    margin-left: 670px;
+    margin-top: 160px;
+    border-radius: 12px;
+}
+
+.textob h2 {
+    margin-bottom: 50px;
+}
+
+/* DISCO 2 */
+
+.disco2 {
+    animation: rotation 8s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.disco2 {
+    margin-left: 0;
+    width: 800px;
+    left: -60px;
+    margin-top: 100px;
+    position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+    display: flex;
+    float: left;
+}
+
+.textorot {
+    margin-top: 180px;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    right: 100px;
+}
+
+.textorot h2 {
+    margin-bottom: 50px;
+}
+
+
+/* DISCO 4 */
+
+.disco4 {
+    animation: rotation 8s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.disco4 {
+    margin-left: 0;
+    width: 800px;
+    left: -60px;
+    margin-top: 100px;
+    position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+    display: flex;
+    float: left;
+}
+
+.textoprod {
+    margin-top: 180px;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    right: 100px;
+}
+
+.textoprod h2 {
+    margin-bottom: 50px;
+}
+
+/* DISCO 5 */
+
+.disco5 {
+    animation: rotation 8s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.disco5 {
+    margin-left: 0;
+    width: 800px;
+    left: -60px;
+    margin-top: 100px;
+    position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+    display: flex;
+    float: left;
+}
+
+.textoed {
+    margin-top: 180px;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    right: 100px;
+}
+
+.textoed h2 {
+    margin-bottom: 50px;
+}
+
+/* DISCO 6 */
+
+.disco6 {
+    animation: rotation 8s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.disco6 {
+    margin-left: 0;
+    width: 800px;
+    left: -60px;
+    margin-top: 100px;
+    position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+    display: flex;
+    float: left;
+}
+
+.textomarkt {
+    margin-top: 180px;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    right: 100px;
+}
+
+.textomarkt h2 {
+    margin-bottom: 50px;
+}
+
+
+/* POR QUE TRABALHAR CONOSCO */
+
+/* .por_que {
+    display: table-cell;
+    width: 1500px;
+    height: 500px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: black;
+} */
+
+ /* .por_que2 {
+    display: inline-block;
+    width: 1348px;
+    height: 100px;
+    background-color: #d44d28;
+ } */
+
+.por_que {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+}
+
+.por_que2 {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 200px;
+    background-color: #d44d28;
+}
+
+.vinylcase {
+    position: relative;
+    display: flex;
+    float: left;
+    margin-left: 50px;
+    width: 500px;
+    z-index: 1;
+}
+
+.whyus {
+    position: absolute;
+    margin-left: 600px;
+    margin-right: 20px;
+    margin-top: 160px;
+    color: white;
+    right: 0;
+    z-index: 2;
+    font-size: 15px;
+}
+
+.whyus h1 {
+    margin-bottom: 10px;
+}
+
+
+/* FOOTER */
+
+.footerContainer {
+    background-color: #d44d28;
+    width: 100%;
+    padding: 20px 30px 5px;
+}
+
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons a {
+    text-decoration: none;
+    padding: 15px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i {
+    font-size: 2rem;
+    color: #d44d28;
+    opacity: 0.9;
+}
+
+.socialicons a:hover {
+    background-color: #f58465;
+    transition: ease 0.3s;
+
+}
+
+.socialicons a:hover i {
+    color: white;
+    transition: ease 0.3s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav li {
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: underline;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #d44d28;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.local {
+    font-size: 25px;
+    color: white;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 972px) {
+    .navbar_menu {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1290px) {
+
+    .footerNav ul {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .ParallaxVideo video {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: #d44d28;
+    }
+
+    .ParallaxVideo {
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+
+}
+@media screen and (max-width: 640px) {
+    .ParallaxVideo h1 {
+        font-size: 50px;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .processo {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/heptarepetido.jpeg");
+        display: grid;
+        z-index: -1;
+    }
+
+    .ptitulo {
+        width: fit-content;
+        font-size: 50px;
+        text-align: left;
+        margin-left: 110px;
+    }
+
+    .disco1 {
+        width: 350px;
+        height: 200px;
+    }
+
+    .textob {
+        font-size: 15px;
+        margin-top: 100px;
+        width: 580px;
+    }
+    .disco2 {
+        width: 350px;
+        height: 200px;
+    }
+
+    .textorot {
+        font-size: 15px;
+        margin-top: 100px;
+        width: 580px;
+    }
+    .disco3 {
+        width: 350px;
+        height: 200px;
+    }
+
+    .textoprod {
+        font-size: 15px;
+        margin-top: 100px;
+        width: 580px;
+    }
+    .disco4 {
+        width: 350px;
+        height: 200px;
+    }
+
+    .textoed {
+        font-size: 15px;
+        margin-top: 100px;
+        width: 580px;
+    }
+
+    .disco5 {
+        width: 350px;
+        height: 200px;
+    }
+
+    .textomarkt {
+        font-size: 15px;
+        margin-top: 100px;
+        width: 580px;
+    }
+
+    .disco6 {
+        width: 350px;
+        height: 200px;
+    }
+
+    hr {
+        width: 483px;
+    }
+
+
+    .teste {
+        display: none;
+    }
+    .teste1 {
+        display: none;
+    }
+    .teste2 {
+        display: none;
+    }
+    .teste3 {
+        display: none;
+    }
+    .teste4 {
+        display: none;
+    }
+
+
+    .vinylcase {
+        width: 200px;
+        height: 200px;
+        align-content: center;
+        margin-left: 20px;
+        margin-top: 140px;
+    }
+
+    .whyus {
+        width: 230px;
+        font-size: 12px;
+        height: 500px;
+    }
+
+    .por_que {
+        height: 500px;
+    }
+
+    .por_que2 {
+        height: 300px;
+    }
+
+}

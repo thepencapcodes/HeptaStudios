@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeptaStudios</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+
+    <!-- Footer stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font stuff -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <img src="images/logobranca.png" href="index.html" id="logo-icon">
+            <div class="navbar_toggle" id="mobile-menu">
+                <!--aqui começa a parte com JS-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <!--itens no menu aqui-->
+                <li class="navbar_item">
+                    <!--adicionar o link (que é pra onde o item do menu vai levar) em "?"-->
+                    <a href="index.html" class="navbar_links"> 
+                        Início
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="aprodutora.html" class="navbar_links_prod">
+                        A produtora
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="formula.html" class="navbar_links">
+                        Fórmula
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <!--adicionar o link (que é pra onde o item do menu vai levar) em "?"-->
+                    <a href="portifolio.html" class="navbar_links">
+                        Portifólio
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <!--adicionar o link (que é pra onde o item do menu vai levar) em "?"-->
+                    <a href="equipe.html" class="navbar_links">
+                        Equipe
+                    </a>
+                </li>
+                <li class="navbar_btn">
+                    <!--adicionar o link (que é pra onde o item do menu vai levar) em "?"-->
+                    <a href="contato.html" class="button">
+                        Entre em contato
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="container">
+        <div class="main" id="home">
+            <div class="ParallaxVideo">
+                <video autoplay muted loop width="100%">
+                    <source src="images/video fundo.mp4" type="video/mp4">
+                </video>
+                <h1>Onde clássicos se reinventam na sétima arte.</h1>
+                
+            </div>
+            <div class="botao">
+                <button class="main_btn"><a href="contato.html">Entre em contato</a></button>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="partepreta">
+            <div class="partepretac">
+                <div class="partepretac2">
+                    <div class="articles">
+                        <article class="a1">
+                            <h1>Hepta Studios e seu fascínio por criar histórias e por reinventar os clássicos através da nossa arte!</h1>
+                        </article>
+                        <article class="a2">
+                            <h2>Venha fazer parte da nossa equipe e solicite já seu orçamento.</h2>
+                        </article>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="logocolorida">
+            <div class="logosection">
+                <div class="videologo">
+                    <video height="600" width="800" muted autoplay class="video">
+                        <source src="images/hepta studios invertido final boa boa.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialicons">
+                <a href="https://www.instagram.com/heptastudios?igsh=dHh3dnpicmN1cGVq"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@heptastudio-m2f?si=39m1HGUALYnj-E48"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@heptastudios?_t=8rDvjEhHTVQ&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="aprodutora.html">A Produtora</a></li>
+                    <li><a href="formula.html">Fórmula</a></li>
+                    <li><a href="portifolio.html">Portifólio</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="contato.html">Entre em contato</a></li>
+                </ul>
+            </div>
+            <div class="local">
+                <p>Localização: Av. Paulista</p>
+            </div>
+        </div>
+        <div class="footerBottom">
+                <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> - Hepta Studios - All Rights Reserved</p>
+            </div>
+    </footer>
+    
+</body>
+</html>

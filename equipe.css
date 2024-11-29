@@ -1,0 +1,626 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+
+.navbar {
+    /* background: #d44d28; */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.navbar-scrolled {
+    background-color: #d44d28;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    /*primeiro valor de margin é top, o segundo é right, o terceiro é bottom e o quarto é left
+    se você inserir só 2 valores, os 2 primeiros vão se referir à top e bottom e os 2 ultimos à left e right*/
+    margin: 0 auto;
+    /* isso também se aplica a padding */
+    padding: 0 15px;
+}
+
+/*vai ser add depois */
+/*(fa-gem)*/
+#logo-icon {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    height: 150px;
+    width: 250px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    top: -30px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_item {
+    height: 60px;
+}
+
+.navbar_links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    position: relative;
+}
+
+.navbar_links_prod {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    width: 140px;
+    position: relative;
+}
+
+.navbar_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: black;
+    color: #fff;
+}
+
+/*isso daqui faz ficar com cor diferente quando voce poe o cursor em cima do botão*/
+/*muda a cor depois*/
+.button:hover {
+    background: #FCC062;
+    transition: all 0.3s ease;
+}
+
+/* .navbar_links:hover {
+    color: #fcc062;
+    transition: all 0.3s ease;
+} */
+
+.navbar_links::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 2px;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar_links_prod::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 2px;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar_links:hover::after {
+    transform: scaleX(1);
+}
+
+    .navbar_links_prod:hover::after {
+transform: scaleX(1);
+}
+
+
+/* MAIN */
+
+.main {
+    height: 750px;
+}
+
+
+.ParallaxVideo{
+    height: 500px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.pimage {
+    max-width: 100%;
+    position: fixed;
+    top:0;
+    bottom: 300px;
+    z-index: -999;
+}
+/* .ParallaxVideo h1 {
+    margin-top: 1rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 20;
+} */
+
+.main_content {
+    z-index: 10;
+}
+
+.ParallaxVideo h1 {
+    margin-top: 150px;
+    padding-left: 40px;
+    width: 800px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 20;
+}
+
+/* sem botão */
+
+
+
+/* CURTAS */
+
+.curta-titles {
+    height: 200px;
+    background-color: #ffd09b;
+    text-align: center;
+    align-content: center;
+    color: #d44d28;
+    font-size: 25px;
+}
+
+.curta-titles2 {
+    height: 100px; 
+    background-color: #d44d28;
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-size: 25px;
+}
+
+.curtas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    background: linear-gradient(#ffd09b, #d44d28);
+}
+
+
+.link {
+    color: #d44d28;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.linkshit {
+    color: #d44d28;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-image {
+    height: 200px;
+    width: 340px;
+}
+
+
+.card-button {
+    font-weight: 300px;
+}
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.card-list .card-item .card-link-active {
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #d44d28;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+}
+
+.card-list .card-link .card-title {
+    font-size: 40px;
+    color: #d44d28;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.card-list .card-link .card-title_L {
+    font-size: 35px;
+    color: #d44d28;
+    font-weight: 600;
+    margin: 13px 0px;
+}
+
+.card-list .card-link .card-button {
+    height: 25px;
+    width: 150px;
+    border-radius: 12px;
+    margin-top: 10px;
+    color: #d44d28;
+    border: 2px solid #d44d28;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card-list .card-link:hover .card-button {
+    background: #d44d28;
+    color: #fff;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #c6e5ff;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #c6e5ff;
+    margin-top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+    
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
+
+    .card-image {
+        height: 350px;
+        width: 200px;
+    }
+    
+}
+
+
+
+
+/* MAS O QUE FAZ X FUNÇÃO */
+
+.masoquefaz {
+    align-items: center;
+    justify-content: center;
+    height: 3090px;
+    background: linear-gradient(#d44d28, #ffd09b);
+}
+
+.titulo_mas {
+    height: 200px;
+    background-color: #d44d28;
+    text-align: center;
+    align-content: center;
+    color: #ffd09b;
+    font-size: 25px;
+}
+
+hr {
+    width: 60%;
+    height: 3px;
+    color: white;
+    background-color: #fff;
+    justify-self: center;
+    position: relative;
+    bottom: 50px;
+}
+
+.mas {
+    align-self: center;
+    align-content: center;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    height: 90%;
+    width: 90%;
+    margin-top: 50px;
+}
+
+.mash12 {
+    color: black;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.mash1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.p1 {
+    color: black;
+}
+
+.diretor {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+.co-diretor {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+.marketing {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+.roteirista {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+.programador {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+.editor {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+.social {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+.designer {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+.produtor {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+.sonoplasta {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+.coord_edicao {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+.diretor_fa {
+    height: fit-content;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 100px;
+    justify-self: center;
+}
+
+
+
+
+
+/* FOOTER */
+
+.footerContainer {
+    background-color: #d44d28;
+    width: 100%;
+    padding: 20px 30px 5px;
+}
+
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons a {
+    text-decoration: none;
+    padding: 15px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i {
+    font-size: 2rem;
+    color: #d44d28;
+    opacity: 0.9;
+}
+
+.socialicons a:hover {
+    background-color: #f58465;
+    transition: ease 0.3s;
+
+}
+
+.socialicons a:hover i {
+    color: white;
+    transition: ease 0.3s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav li {
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: underline;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #d44d28;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.local {
+    font-size: 25px;
+    color: white;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* RESPONSIVO */
+
+@media screen and (max-width: 1290px) {
+    .masoquefaz {
+        height: fit-content;
+    }
+
+    .footerNav ul {
+        display: block;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .pimage {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+
+}
+
+@media screen and (max-width: 972px) {
+    .navbar_menu {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 710px) {
+    .ParallaxVideo h1 {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeptaStudios</title>
+
+    <link rel="stylesheet" href="portifolio.css">
+    <!-- footer stuff -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- font stuff -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        
+    <!-- swiper -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script defer src="portifolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body> 
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <img src="images/logobranca.png" href="index.html" id="logo-icon">
+            <div class="navbar_toggle" id="mobile-menu">
+                <!--aqui começa a parte com JS-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <!--itens no menu aqui-->
+                <li class="navbar_item">
+                    <!--adicionar o link (que é pra onde o item do menu vai levar) em "?"-->
+                    <a href="index.html" class="navbar_links"> 
+                        Início
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="aprodutora.html" class="navbar_links_prod">
+                        A produtora
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="formula.html" class="navbar_links">
+                        Fórmula
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <!--adicionar o link (que é pra onde o item do menu vai levar) em "?"-->
+                    <a href="portifolio.html" class="navbar_links">
+                        Portifólio
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <!--adicionar o link (que é pra onde o item do menu vai levar) em "?"-->
+                    <a href="equipe.html" class="navbar_links">
+                        Equipe
+                    </a>
+                </li>
+                <li class="navbar_btn">
+                    <!--adicionar o link (que é pra onde o item do menu vai levar) em "?"-->
+                    <a href="contato.html" class="button">
+                        Entre em contato
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="container">
+        <div class="main" id="home">
+            <div class="ParallaxVideo">
+                <video autoplay muted loop width="100%">
+                    <source src="images/portifolio/fundoport.mp4" type="video/mp4">
+                </video>
+                <h1>Conheça alguns dos nossos projetos!</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CURTAS -->
+    <div class="curta-titles">
+        <h1>Curta-metragens</h1>
+        <h3>Projetos de 1 minuto</h3>
+    </div>
+    <div class="curtas">
+        <div class="container-curta swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtu.be/f0VZ5vTROJw?si=o2Mm1SatOcexKayp" class="card-link">
+                            <img src="images/portifolio/(im)visible.jpeg" alt="(im)visible" class="card-image">
+                            <!-- NO BADGE -->
+                            <h2 class="card-title">(Im)visible</h2>
+                            <button class="card-button">Saiba mais</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtu.be/k2qsXWHUl3Q?si=y0Jo6DYuAVnCn1yY" class="card-link">
+                            <img src="images/portifolio/a_espera.jpeg" alt="a_espera" class="card-image">
+                            <!-- NO BADGE -->
+                            <h2 class="card-title">A Espera</h2>
+                            <button class="card-button">Saiba mais</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtu.be/FLChIvKWqZ8?si=5ptFJUkVILAEV9I5" class="card-link">
+                            <img src="images/portifolio/angustia.jpeg" alt="angustia" class="card-image">
+                            <!-- NO BADGE -->
+                            <h2 class="card-title">Angústia</h2>
+                            <button class="card-button">Saiba mais</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtu.be/3rhFyDjkXY0?si=jvYSy1pwK9i5Up4X" class="card-link">
+                            <img src="images/portifolio/balazio.jpeg" alt="balazio" class="card-image">
+                            <!-- NO BADGE -->
+                            <h2 class="card-title">Balazio</h2>
+                            <button class="card-button">Saiba mais</button>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="https://youtu.be/XmBEkORtaEE?si=dOJax8dHYsrky_jl" class="card-link">
+                            <img src="images/portifolio/registro.jpeg" alt="registro" class="card-image">
+                            <!-- NO BADGE -->
+                            <h2 class="card-title">registro024</h2>
+                            <button class="card-button">Saiba mais</button>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="curta-titles2">
+        <h3>Curta-metragem de 10 minutos</h3>
+    </div>
+    <div class="dybbuk">
+        <div class="container-dybbuk swiper">
+            <div class="dybbuk-wrapper">
+                <ul class="dybbuk-list swiper-wrapper">
+                    <li class="dybbuk-item swiper-slide">
+                        <a href="/" class="dybbuk-link">
+                            <img src="images/portifolio/dybbuk.jpeg" alt="dybbuk" class="dybbuk-image">
+                            <!-- NO BADGE -->
+                            <h2 class="dybbuk-title">Dybbuk: Ruídos Mortais</h2>
+                            <button class="dybbuk-button">Saiba mais</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialicons">
+                <a href="https://www.instagram.com/heptastudios?igsh=dHh3dnpicmN1cGVq"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@heptastudio-m2f?si=39m1HGUALYnj-E48"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@heptastudios?_t=8rDvjEhHTVQ&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="aprodutora.html">A Produtora</a></li>
+                    <li><a href="formula.html">Fórmula</a></li>
+                    <li><a href="portifolio.html">Portifólio</a></li>
+                    <li><a href="equipe.html">Equipe</a></li>
+                    <li><a href="contato.html">Entre em contato</a></li>
+                </ul>
+            </div>
+            <div class="local">
+                <p>Localização: Av. Paulista</p>
+            </div>
+        </div>
+        <div class="footerBottom">
+                <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> - Hepta Studios - All Rights Reserved</p>
+            </div>
+    </footer>
+    
+</body>
+</html>
